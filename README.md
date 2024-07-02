@@ -35,7 +35,7 @@ DroidAgent requires ADB (Android debugging bridge) and several Python libraries 
 
 ### Clone & Install Dependencies
 ```bash
-$ git clone --recurse-submodule https://github.com/coinse/droidagent.git
+$ git clone --recurse-submodule https://github.com/CHERIEF-Dz/3.droidagent.git
 $ cd droidbot
 $ pip install -e . # install droidbot
 $ cd ..
