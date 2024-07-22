@@ -1,0 +1,139 @@
+
+*** System:
+You are a helpful task planner for using an Android mobile application named A2DP Volume. You are planning for a person named "Jade Green" with the following profile:
+(The username and password is what Jade Green generally uses for their accounts.)
+- name: Jade Green
+- phone: 081-827-7650
+- email: anony1017mous@gmail.com
+- username: tester.green
+- password: green1029*
+- date_of_birth: 1997-10-29
+- age: 25
+- self_introduction: I am a 25-year-old graduate student studying computer science.
+
+Jade Green's ultimate goal is to visit as many pages as possible while trying their core functionalities. 
+
+- A2DP Volume app has following pages: [ConnectWidgetConfigure, main, ManageData, Preferences, EditDevice, AppChooser, CustomIntentMaker, PackagesChooser, LocViewer] (Note that the pages are listed in random order)
+- Currently, Jade Green has visited the following pages with the following number of times: {main: 1}
+- Currently, Jade Green is on the main page.
+- Pages never visited yet: [LocViewer, EditDevice, ConnectWidgetConfigure, Preferences, PackagesChooser, AppChooser, ManageData, CustomIntentMaker] 
+
+Jade Green is not familiar with the app and does not fully know how to navigate to each page and what Jade Green can do on each page.
+To effectively explore the app for their goal, Jade Green needs a new task that aligns with the following desirable properties:
+- (Realism) The task should corresponds to a realistic usage scenario of A2DP Volume app, and reflect user's intent for actually making use of the app's functionality. Do NOT plan vague tasks like "Navigate to X" or "Explore X". Instead, plan a realistic task so that it naturally leads to discover new widgets or pages. For example, "Add X to cart" is more preferred than "Navigate to the cart page" ot "Explore the cart page".
+- (Importance) Prioritize important tasks that make use of core and basic functions of the app. Do not stay on the same page for too long while having unvisited pages. After visiting all the pages, plan more advanced tasks based on Jade Green's own preferences.
+- (Diversity) You need to plan diverse tasks that are different from the tasks that Jade Green has performed before. If a previous task has failed despite multiple attempts, the task might be too hard or impossible. Postpone the task and plan a different task. Pay attention to the number of previous actions performed on a specific widget, and consider a task that involves an widget that has never been interacted with yet.
+- (Difficulty) The task should not be too hard since Jade Green may not have learned enough knowledge about the app to complete it yet. Plan a task that is highly likely to succeed in a few steps from the current state. However, the task should correspond to a meaningful function unit of the app. For example, "Attach a photo to a message" is more preferred than "Touch a photo button".
+
+*** User:
+Plan Jade Green's next task based on the following information.
+
+Jade Green's prior knowledge and history of previous tasks so far (listed in chronological order):
+===
+2024-07-22 12:10:39: [INITIAL_KNOWLEDGE] Jade Green started the A2DP Volume app
+===
+
+Jade Green's learnt knowledge from previous tasks (which may be relevant to the current context):
+===
+
+===
+
+Current page (organized in a hierarchical structure):
+```json
+{
+  page_name: main,
+  children: [
+    {
+      widget_type: TextView,
+      text: A2DP Volume Version: 2.13.0.4
+    },
+    {
+      ID: 6,
+      widget_type: ImageButton,
+      content_description: More options,
+      possible_action_types: [
+        touch,
+        long_touch
+      ],
+      num_prev_actions: 0
+    },
+    {
+      ID: 11,
+      widget_type: Button,
+      text: Stored Location,
+      possible_action_types: [
+        touch,
+        long_touch
+      ],
+      num_prev_actions: 0
+    },
+    {
+      ID: 12,
+      widget_type: Button,
+      text: Load Devices,
+      possible_action_types: [
+        touch
+      ],
+      num_prev_actions: 0
+    },
+    {
+      ID: 13,
+      widget_type: Button,
+      text: Stop Service,
+      possible_action_types: [
+        touch
+      ],
+      num_prev_actions: 0
+    },
+    {
+      ID: 14,
+      widget_type: ListView,
+      content_description: Bluetooth Devices,
+      resource_id: ListView01,
+      possible_action_types: [
+        long_touch
+      ],
+      num_prev_actions: 0,
+      children: [
+        {
+          ID: 15,
+          widget_type: TextView,
+          text: Car Dock,
+          possible_action_types: [
+            touch,
+            long_touch
+          ],
+          num_prev_actions: 0
+        }
+      ]
+    }
+  ]
+}
+```
+Note that `num_prev_actions` means the number of times the widget has been interacted with during the previous tasks. If `num_prev_actions` property is not included in the widget dictionary, Jade Green has never performed any action on the widget yet.
+
+Jade Green can perform the following types of actions:
+- Scroll on a scrollable widget
+- Touch on a clickable widget
+- Long touch on a long-clickable widget
+- Fill in an editable widget
+- Navigate back by pressing the back button
+
+I am going to provide a template for your output to reason about your next task step by step. Fill out the <...> parts in the template with your own words. Do not include anything else in your answer except the text to fill out the template. Preserve the formatting and overall template.
+
+=== Below is the template for your answer ===
+Reasoning about Jade Green's new task: <1~2 sentences in one line. Use the aforementioned four properties: realism, importance, diversity and difficulty to reason about the next task>
+Jade Green's next task: <1 sentence, start with a verb>
+End condition of Jade Green's next task: <1 sentence, start with "The task is known to be completed when">
+Reasoning of the first action of the Jade Green's next task: <reasoning and description of the first action initiating the task>
+Rough plan for the task in Jade Green's perspective: <1 sentence, start with "I plan to"; pretend that you are Jade Green>
+
+*** Assistant:
+Reasoning about Jade Green's new task: Given that Jade Green is a graduate student studying computer science, it is realistic for them to explore the core functionalities of the app. Since they have never interacted with most of the widgets, it is important to start with the basic and core functions. The next task will provide diversity by interacting with a new widget and it is not expected to be difficult as it involves using a basic function of the app.
+Jade Green's next task: Load the devices connected via Bluetooth.
+End condition of Jade Green's next task: The task is known to be completed when a list of Bluetooth devices connected is displayed.
+Reasoning of the first action of the Jade Green's next task: The "Load Devices" button seems to be the logical first step in loading the devices connected via Bluetooth. This will provide Jade Green with a list of devices, helping them understand how the app interacts with paired devices.
+Rough plan for the task in Jade Green's perspective: I plan to tap on the "Load Devices" button to see the list of devices connected via Bluetooth.
+
+*** User:
+Good. Now, based on your previous answer, execute the first action (by calling a function) to start the task. Pay attention to the possible action types specified in the target widget.

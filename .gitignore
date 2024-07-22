@@ -1,5 +1,6 @@
 **/__pycache__
 .env
+droidagent_env/
 *.egg-info
 target_apps/*.apk
 **/.DS_Store

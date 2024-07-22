@@ -24,7 +24,7 @@ DroidAgent requires ADB (Android debugging bridge) and several Python libraries 
     2. Install command line tools: `Android Studio > Tools > SDK Manager > SDK Tools > Android SDK Command-line Tools (latest)`
     3. Setup Environment Variables: [Check official document](https://developer.android.com/studio/command-line?hl=ko#environment-variables)
         ```bash
-        export ANDROID_HOME="[YOUR_HOME_DIRECTORY]/Android/sdk"
+        export ANDROID_HOME="/home/abdelkader/Android/Sdk"
         export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin"
         ```
 
@@ -41,6 +41,7 @@ $ pip install -e . # install droidbot
 $ cd ..
 $ pip install -r requirements.txt
 $ pip install -e . # install droidagent
+$ pip install androguard==3.4.0a1
 ```
 
 ## Run DroidAgent

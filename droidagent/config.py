@@ -7,9 +7,9 @@ from .utils.activity_name_manager import ActivityNameManager
 
 file_dir = os.path.dirname(os.path.realpath(__file__))
 
-GPT_4 = 'gpt-4-0613'
-GPT_3_5 = 'gpt-3.5-turbo-0613'
-GPT_3_5_16k = 'gpt-3.5-turbo-16k-0613'
+GPT_4 = 'gpt-4'
+GPT_3_5 = 'gpt-4o-mini' #[from OpenAI docs] As of July 2024, gpt-4o-mini should be used in place of gpt-3.5-turbo, as it is cheaper, more capable, multimodal, and just as fast. 
+GPT_3_5_16k = 'gpt-4o-mini'#The latest, 'gpt-3.5-turbo-16k-0613' is deprecated
 
 class Persona:
     def __init__(self, persona_dict):
